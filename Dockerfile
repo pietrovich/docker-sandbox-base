@@ -35,6 +35,9 @@ RUN yum -y install \
     php71w-pecl-xdebug \
     php71w-devel \
     which \
+    psmisc \
+    net-tools \
+    sudo \
     mc
 
 ADD templates/xdebug.ini /etc/php.d/xdebug.ini
@@ -42,7 +45,7 @@ RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
 RUN npm install -g \
-    typescript@^2.5.3 \
+    typescript@^2.6.0 \
     less \
     grunt-cli \
     gulp \
