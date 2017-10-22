@@ -45,7 +45,7 @@ RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
 RUN npm install -g \
-    typescript@^2.6.0 \
+    typescript@rc \
     less \
     grunt-cli \
     gulp \
