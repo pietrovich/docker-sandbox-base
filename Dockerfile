@@ -55,5 +55,3 @@ RUN npm install node-sass -g --unsafe-perm
 
 RUN yum -y clean all
 RUN rm -rf /var/cache/yum
-
-# comment added to trigger Docker hub build...
