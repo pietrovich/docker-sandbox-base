@@ -6,9 +6,9 @@ RUN chmod 775 /usr/bin/composer
 
 RUN yum -y install https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-ADD https://rpm.nodesource.com/setup_8.x /root/setup-nodejs_8.x.sh
-RUN chmod 770 /root/setup-nodejs_8.x.sh
-RUN [ "/bin/bash", "-c", "/root/setup-nodejs_8.x.sh" ]
+ADD https://rpm.nodesource.com/setup_9.x /root/setup-nodejs_9.x.sh
+RUN chmod 770 /root/setup-nodejs_9.x.sh
+RUN [ "/bin/bash", "-c", "/root/setup-nodejs_9.x.sh" ]
 
 RUN yum -y update
 
@@ -45,7 +45,7 @@ RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
 RUN npm install -g \
-    typescript@^2.6.1 \
+    typescript@^2.7.2 \
     less \
     grunt-cli \
     gulp \
