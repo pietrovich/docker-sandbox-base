@@ -13,6 +13,7 @@ RUN [ "/bin/bash", "-c", "/root/setup-nodejs_9.x.sh" ]
 RUN yum -y update
 
 RUN yum -y install \
+    telnet \
     git \
     bash \
     gcc-c++ \
