@@ -46,6 +46,8 @@ ADD templates/xdebug.ini /etc/php.d/xdebug.ini
 RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
+RUN npm install -g npm
+
 RUN npm install -g \
     typescript@^2.7.2 \
     less \
