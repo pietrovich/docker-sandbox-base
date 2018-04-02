@@ -47,15 +47,12 @@ RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
 RUN npm install -g npm
+RUN npm --version
 
 RUN npm install -g \
-    typescript@^2.7.2 \
+    typescript@^2.8 \
     less \
-    grunt-cli \
-    gulp \
-    bower \
-    webpack@^2.0 \
-    grunt \
+    webpack@^4.0 \
     node-gyp
 
 RUN npm install node-sass -g --unsafe-perm
