@@ -17,6 +17,7 @@ RUN yum -y install \
     telnet \
     git \
     bash \
+    openssl \
     gcc-c++ \
     make \
     nodejs \
