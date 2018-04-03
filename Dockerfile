@@ -43,6 +43,7 @@ RUN yum -y install \
     which \
     psmisc \
     net-tools \
+    bind-utils \
     sudo \
     mc
 
