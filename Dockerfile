@@ -10,7 +10,7 @@ ADD https://rpm.nodesource.com/setup_9.x /root/setup-nodejs_9.x.sh
 RUN chmod 770 /root/setup-nodejs_9.x.sh
 RUN [ "/bin/bash", "-c", "/root/setup-nodejs_9.x.sh" ]
 
-RUN curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+ADD https://dl.yarnpkg.com/rpm/yarn.repo /etc/yum.repos.d/yarn.repo
 
 RUN yum -y update
 
