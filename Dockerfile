@@ -51,6 +51,10 @@ ADD templates/xdebug.ini /etc/php.d/xdebug.ini
 RUN chown root:root /etc/php.d/xdebug.ini
 RUN chmod 0644 /etc/php.d/xdebug.ini
 
+ADD templates/php.ini /etc/php.ini
+RUN chown root:root /etc/php.ini
+RUN chmod 0666 /etc/php.d/php.ini
+
 RUN npm install -g npm
 RUN npm --version
 RUN yarn --version
