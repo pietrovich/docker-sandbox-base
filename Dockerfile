@@ -55,12 +55,12 @@ ADD templates/php.ini /etc/php.ini
 RUN chown root:root /etc/php.ini
 RUN chmod 0666 /etc/php.ini
 
-RUN npm install -g npm@^6.0
+RUN npm install -g npm@^6.1
 RUN npm --version
 RUN yarn --version
 
 RUN npm install -g \
-    typescript@^2.8 \
+    typescript@^2.8.4 \
     less \
     webpack@^4.0 \
     node-gyp
