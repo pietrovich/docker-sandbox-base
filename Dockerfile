@@ -6,9 +6,9 @@ RUN chmod 775 /usr/bin/composer
 
 RUN yum -y install https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-ADD https://rpm.nodesource.com/setup_9.x /root/setup-nodejs_9.x.sh
-RUN chmod 770 /root/setup-nodejs_9.x.sh
-RUN [ "/bin/bash", "-c", "/root/setup-nodejs_9.x.sh" ]
+ADD https://rpm.nodesource.com/setup_10.x /root/setup-nodejs.sh
+RUN chmod 770 /root/setup-nodejs.sh
+RUN [ "/bin/bash", "-c", "/root/setup-nodejs.sh" ]
 
 ADD https://dl.yarnpkg.com/rpm/yarn.repo /etc/yum.repos.d/yarn.repo
 
@@ -45,7 +45,8 @@ RUN yum -y install \
     net-tools \
     bind-utils \
     sudo \
-    mc
+    mc \
+    jq
 
 ADD templates/xdebug.ini /etc/php.d/xdebug.ini
 RUN chown root:root /etc/php.d/xdebug.ini
@@ -60,7 +61,7 @@ RUN npm --version
 RUN yarn --version
 
 RUN npm install -g \
-    typescript@^2.8.4 \
+    typescript@^3.0.1 \
     less \
     webpack@^4.0 \
     node-gyp
