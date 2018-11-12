@@ -45,6 +45,7 @@ RUN yum -y install \
     net-tools \
     bind-utils \
     sudo \
+    unzip \
     mc \
     jq
 
