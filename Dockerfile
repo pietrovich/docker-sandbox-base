@@ -62,11 +62,12 @@ RUN npm --version
 RUN yarn --version
 
 RUN npm install -g \
-    typescript@^3.1.5 \
+    typescript@^3.1.6 \
     less \
     webpack@^4.0 \
     node-gyp
 
+RUN tsc --version
 RUN npm install node-sass -g --unsafe-perm
 
 RUN yum -y clean all
