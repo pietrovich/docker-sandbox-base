@@ -62,7 +62,7 @@ RUN npm --version
 RUN yarn --version
 
 RUN npm install -g \
-    typescript@^3.0.1 \
+    typescript@^3.1.5 \
     less \
     webpack@^4.0 \
     node-gyp
