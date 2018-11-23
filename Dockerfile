@@ -10,6 +10,10 @@ ADD https://rpm.nodesource.com/setup_10.x /root/setup-nodejs.sh
 RUN chmod 770 /root/setup-nodejs.sh
 RUN [ "/bin/bash", "-c", "/root/setup-nodejs.sh" ]
 
+ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 /usr/bin/dumb-init
+RUN chmod 775 /usr/bin/dumb-init
+RUN chown root:root /usr/bin/dumb-init
+
 ADD https://dl.yarnpkg.com/rpm/yarn.repo /etc/yum.repos.d/yarn.repo
 
 RUN yum -y update
